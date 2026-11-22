@@ -1,0 +1,48 @@
+{
+  "name": "@lumozai/skim",
+  "version": "0.1.0",
+  "description": "Skim first, zoom in only when needed. Token-efficient CLI & MCP output compressor with lossless-on-demand drill-down for AI coding agents.",
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "token-efficiency",
+    "claude-code",
+    "cursor",
+    "codex",
+    "cli",
+    "context-compression",
+    "lumozai"
+  ],
+  "license": "MIT",
+  "author": "LumozAI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "skim": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/*.test.ts",
+    "bench": "tsx bench/run-bench.ts",
+    "mcp": "node dist/cli.js mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "js-tiktoken": "^1.0.21",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
