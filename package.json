@@ -15,6 +15,14 @@
   ],
   "license": "MIT",
   "author": "LumozAI",
+  "homepage": "https://github.com/LumozAI-com/skim#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LumozAI-com/skim.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LumozAI-com/skim/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
