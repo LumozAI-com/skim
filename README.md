@@ -14,20 +14,20 @@ Coding agents burn thousands of tokens reading passing tests, `node_modules` sta
 
 ## Benchmark Results
 
-Token counts use the real `o200k_base` tokenizer (GPT-4o family; a close proxy for Claude), and include skim's footer.
+Token counts use the real `o200k_base` tokenizer (GPT-4o family) and include skim's footer. Raw counts exclude ANSI color codes, so colored output isn't credited with savings from stripping colors. Claude's tokenizer differs, so absolute counts on Claude will differ somewhat.
 
-**Real command output** (captured from actual runs, stored in `test/fixtures/`; regenerate with `npm run bench`):
+**Real command output** (captured from actual runs on small test projects, stored in `test/fixtures/`; regenerate with `npm run bench`):
 
 | Command | Raw Tokens | Skim Tokens | Saved |
 | :--- | ---: | ---: | ---: |
 | `npm install --loglevel verbose` | 8,925 | 33 | **-99.6%** |
-| `vitest run` (200 tests, 16 failing) | 14,148 | 1,165 | **-91.8%** |
-| `vitest run --reporter=verbose` (200 tests, 16 failing) | 17,138 | 1,165 | **-93.2%** |
+| `vitest run` (200 tests, 16 failing) | 5,732 | 1,165 | **-79.7%** |
+| `vitest run --reporter=verbose` (200 tests, 16 failing) | 6,986 | 1,165 | **-83.3%** |
 | `jest` (200 tests, 16 failing) | 4,404 | 1,528 | **-65.3%** |
 | `pytest -v` (203 tests, 3 failing) | 3,869 | 161 | **-95.8%** |
 | `pytest` (203 tests, 3 failing) | 421 | 161 | **-61.8%** |
 | `eslint` (67 errors, 30 warnings, 5 files) | 2,292 | 1,013 | **-55.8%** |
-| `tsc --pretty` (37 errors, 4 files) | 5,440 | 838 | **-84.6%** |
+| `tsc --pretty` (37 errors, 4 files) | 2,323 | 838 | **-63.9%** |
 | `tsc` (37 errors, 4 files) | 991 | 399 | **-59.7%** |
 | `tsc` (4 errors) | 130 | 135 | passthrough (+6-token exit marker) |
 
@@ -117,6 +117,9 @@ const detail = inspectRun(result.runId!, { query: "TypeError", contextLines: 3 }
 - [ ] **v0.2:** Code zoom layer (`repo_map`, `read_skeleton`, `read_symbol`) via tree-sitter
 - [ ] **v0.3:** Session read cache (avoid re-sending unchanged files in long agent sessions)
 - [ ] **v0.4:** Additional parsers (`cargo test`, `go test`, `phpunit`, `next build`, `docker build`)
+
+## Credits
+- Thanks to [@faridulhq](https://github.com/faridulhq) for real-world testing and feedback that led to the configurable timeout (`v0.1.1`) and zero-dropped-error parser fixes & real-output test suite (`v0.1.2`).
 
 ## License
 MIT © LumozAI
