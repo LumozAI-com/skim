@@ -57,10 +57,16 @@ You can also run `skim` yourself in any terminal:
 Put `skim run` in front of any command:
 
 ```bash
+# Run a command with clean output (default timeout: 5 minutes)
 skim run npm test
 skim run pytest -v
 skim run npm install
 skim run git diff
+
+# For slow builds or long test suites, raise or disable the timeout:
+skim run --timeout 15m npx playwright test
+skim run --timeout 0 npm run build
+# Or set SKIM_TIMEOUT_MS=0 in your environment to disable timeouts globally
 ```
 
 At the bottom of a compressed result, you'll see a short footer like:

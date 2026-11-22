@@ -11,12 +11,30 @@ export interface RunCommandOptions {
   saveRaw?: boolean;
 }
 
+export const DEFAULT_TIMEOUT_MS = 300_000;
+
+export function parseTimeout(value: string | number | undefined): number | undefined {
+  if (value === undefined || value === "") return undefined;
+  if (typeof value === "number") return Number.isFinite(value) && value >= 0 ? value : undefined;
+  const trimmed = value.trim().toLowerCase();
+  if (trimmed === "0" || trimmed === "none" || trimmed === "off") return 0;
+  const m = trimmed.match(/^(\d+(?:\.\d+)?)(ms|s|m|h)?$/);
+  if (!m) return undefined;
+  const n = Number(m[1]);
+  const unit = m[2] || "ms";
+  if (unit === "h") return Math.round(n * 3_600_000);
+  if (unit === "m") return Math.round(n * 60_000);
+  if (unit === "s") return Math.round(n * 1_000);
+  return Math.round(n);
+}
+
 export function runCompressed(
   command: string,
   options: RunCommandOptions = {}
 ): Promise<CompressResult> {
   const cwd = options.cwd || process.cwd();
-  const timeoutMs = options.timeoutMs ?? 120_000;
+  const envTimeout = parseTimeout(process.env.SKIM_TIMEOUT_MS);
+  const timeoutMs = options.timeoutMs ?? envTimeout ?? DEFAULT_TIMEOUT_MS;
   const saveRaw = options.saveRaw ?? true;
 
   return new Promise((resolve) => {
@@ -31,10 +49,13 @@ export function runCompressed(
     let stderr = "";
     let timedOut = false;
 
-    const timer = setTimeout(() => {
-      timedOut = true;
-      child.kill("SIGTERM");
-    }, timeoutMs);
+    const timer =
+      timeoutMs > 0
+        ? setTimeout(() => {
+            timedOut = true;
+            child.kill("SIGTERM");
+          }, timeoutMs)
+        : undefined;
 
     child.stdout.on("data", (chunk: Buffer) => {
       stdout += chunk.toString("utf8");
@@ -45,10 +66,10 @@ export function runCompressed(
     });
 
     child.on("close", (code) => {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
       const exitCode = timedOut ? 124 : (code ?? 1);
       if (timedOut) {
-        stderr += `\nCommand timed out after ${timeoutMs}ms`;
+        stderr += `\nCommand timed out after ${timeoutMs}ms (use --timeout 0 or SKIM_TIMEOUT_MS=0 to disable)`;
       }
 
       const result = compressOutput({ command, stdout, stderr, exitCode });
@@ -75,7 +96,7 @@ export function runCompressed(
     });
 
     child.on("error", (err) => {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
       const result = compressOutput({
         command,
         stdout,

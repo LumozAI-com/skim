@@ -8,6 +8,7 @@ import {
   countTokens,
   formatSkimOutput,
   inspectRun,
+  parseTimeout,
   runCompressed,
   stripAnsi,
 } from "../src/index.js";
@@ -242,5 +243,22 @@ describe("skim core", () => {
     assert.match(inspected.content, /42: line 42 SPECIAL_NEEDLE/);
     assert.match(inspected.content, /41: line 41/);
     assert.match(inspected.content, /43: line 43/);
+  });
+
+  it("parses timeout durations and supports timeoutMs: 0 (no timeout)", async () => {
+    assert.equal(parseTimeout("0"), 0);
+    assert.equal(parseTimeout("off"), 0);
+    assert.equal(parseTimeout("30s"), 30_000);
+    assert.equal(parseTimeout("10m"), 600_000);
+    assert.equal(parseTimeout("1500"), 1500);
+    assert.equal(parseTimeout("bogus"), undefined);
+
+    const noTimeout = await runCompressed(`node -e "console.log('ok')"`, { timeoutMs: 0 });
+    assert.equal(noTimeout.exitCode, 0);
+    assert.match(noTimeout.summary, /ok/);
+
+    const timedOut = await runCompressed(`node -e "setTimeout(() => {}, 2000)"`, { timeoutMs: 80 });
+    assert.equal(timedOut.exitCode, 124);
+    assert.match(timedOut.summary, /timed out/i);
   });
 });

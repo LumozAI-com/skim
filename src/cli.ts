@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { formatSkimOutput, runCompressed } from "./core/runner.js";
+import { formatSkimOutput, parseTimeout, runCompressed } from "./core/runner.js";
 import { inspectRun, loadStats } from "./core/store.js";
 import { startMcpServer } from "./mcp.js";
 
@@ -7,7 +7,9 @@ function printHelp(): void {
   console.log(`skim - Token-efficient CLI & MCP output compressor for AI coding agents
 
 Usage:
-  skim run <command...>              Run a command and print compressed output
+  skim run [--timeout <dur>] <cmd>   Run a command and print compressed output
+    --timeout <dur>                  Timeout e.g. 5m, 30s, 60000, or 0 for none
+                                     (default: 5m, or SKIM_TIMEOUT_MS env var)
   skim inspect <run_id> [options]    Inspect saved raw output from a run
     --query <text>                   Search matching lines (case-insensitive)
     --start <line>                   1-based start line
@@ -33,12 +35,33 @@ async function main(): Promise<void> {
   }
 
   if (sub === "run") {
-    const cmd = args.slice(1).join(" ").trim();
+    const runArgs = args.slice(1);
+    let timeoutMs: number | undefined;
+    let cmdStart = 0;
+
+    if (runArgs[0] === "--timeout" && runArgs[1] !== undefined) {
+      timeoutMs = parseTimeout(runArgs[1]);
+      if (timeoutMs === undefined) {
+        console.error(`Error: invalid --timeout value "${runArgs[1]}". Examples: 30s, 10m, 60000, 0`);
+        process.exit(1);
+      }
+      cmdStart = 2;
+    } else if (runArgs[0]?.startsWith("--timeout=")) {
+      const val = runArgs[0].slice("--timeout=".length);
+      timeoutMs = parseTimeout(val);
+      if (timeoutMs === undefined) {
+        console.error(`Error: invalid --timeout value "${val}". Examples: 30s, 10m, 60000, 0`);
+        process.exit(1);
+      }
+      cmdStart = 1;
+    }
+
+    const cmd = runArgs.slice(cmdStart).join(" ").trim();
     if (!cmd) {
       console.error("Error: missing command. Example: skim run npm test");
       process.exit(1);
     }
-    const result = await runCompressed(cmd);
+    const result = await runCompressed(cmd, { timeoutMs });
     console.log(formatSkimOutput(result));
     process.exit(result.exitCode);
   }

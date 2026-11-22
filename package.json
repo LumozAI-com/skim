@@ -1,6 +1,6 @@
 {
   "name": "@lumozai/skim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Skim first, zoom in only when needed. Token-efficient CLI & MCP output compressor with lossless-on-demand drill-down for AI coding agents.",
   "keywords": [
     "mcp",

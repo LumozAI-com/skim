@@ -7,7 +7,7 @@ import { inspectRun } from "./core/store.js";
 export async function startMcpServer(): Promise<void> {
   const server = new McpServer({
     name: "skim",
-    version: "0.1.0",
+    version: "0.1.1",
   });
 
   server.tool(
@@ -16,7 +16,12 @@ export async function startMcpServer(): Promise<void> {
     {
       command: z.string().describe("Shell command to execute (e.g. 'npm test', 'npx tsc --noEmit', 'pytest')"),
       cwd: z.string().optional().describe("Working directory (defaults to server cwd)"),
-      timeoutMs: z.number().int().positive().max(600_000).optional().describe("Timeout in ms (default 120000)"),
+      timeoutMs: z
+        .number()
+        .int()
+        .min(0)
+        .optional()
+        .describe("Timeout in ms (default 300000 / 5m; pass 0 for no timeout)"),
     },
     async ({ command, cwd, timeoutMs }) => {
       const result = await runCompressed(command, { cwd, timeoutMs });

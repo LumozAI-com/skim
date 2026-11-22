@@ -71,10 +71,14 @@ Add `skim` to your MCP client config (Claude Code, Cursor, Codex, etc.):
 ## CLI Usage
 
 ```bash
-# Run any command with compressed output
+# Run any command with compressed output (default timeout: 5m)
 skim run npx vitest run
 skim run pytest -v
 skim run npm install
+
+# Custom timeout or disable timeout completely (--timeout 0 / SKIM_TIMEOUT_MS=0)
+skim run --timeout 15m npx playwright test
+skim run --timeout 0 npm run build
 
 # Drill into a saved raw log only if needed
 skim inspect run_a1b2c3 --query "AssertionError" --context 3
