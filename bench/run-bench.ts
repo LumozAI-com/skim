@@ -206,3 +206,36 @@ const totalPct = ((totalSaved / totalRaw) * 100).toFixed(1);
 console.log(
   `| **Total** | — | **${totalRaw.toLocaleString()}** | **${totalCompressed.toLocaleString()}** | **-${totalPct}%** |`
 );
+
+// ---------------------------------------------------------------------------
+// Real captured output (test/fixtures/). These are the numbers to quote.
+// ---------------------------------------------------------------------------
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { countTokens, formatSkimOutput } from "../src/index.js";
+
+const fixtureDir = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "test", "fixtures");
+const realCases: Array<[string, string, string, number]> = [
+  ["`npm install --loglevel verbose`", "npm-install-verbose.txt", "npm install --loglevel verbose", 0],
+  ["`vitest run` (200 tests, 16 failing)", "vitest-default.txt", "npx vitest run", 1],
+  ["`vitest run --reporter=verbose` (200 tests, 16 failing)", "vitest-verbose.txt", "npx vitest run --reporter=verbose", 1],
+  ["`jest` (200 tests, 16 failing)", "jest.txt", "npx jest", 1],
+  ["`pytest -v` (203 tests, 3 failing)", "pytest-verbose.txt", "pytest -v", 1],
+  ["`pytest` (203 tests, 3 failing)", "pytest-default.txt", "pytest", 1],
+  ["`eslint` (67 errors, 30 warnings, 5 files)", "eslint.txt", "npx eslint lint", 1],
+  ["`tsc --pretty` (37 errors, 4 files)", "tsc-pretty.txt", "npx tsc --pretty", 2],
+  ["`tsc` (37 errors, 4 files)", "tsc-plain.txt", "npx tsc", 2],
+];
+
+console.log("\nReal captured output (tokens include skim's footer):\n");
+console.log("| Command | Raw Tokens | Skim Tokens | Saved |");
+console.log("| :--- | ---: | ---: | ---: |");
+for (const [name, file, command, exitCode] of realCases) {
+  const raw = fs.readFileSync(path.join(fixtureDir, file), "utf8");
+  const res = compressOutput({ command, stdout: raw, stderr: "", exitCode });
+  const shown = countTokens(formatSkimOutput({ ...res, runId: "run_000000" }));
+  const rawT = countTokens(raw);
+  const pct = (((rawT - shown) / rawT) * 100).toFixed(1);
+  console.log(`| ${name} | ${rawT.toLocaleString()} | ${shown.toLocaleString()} | ${res.passthrough ? "passthrough" : `**-${pct}%**`} |`);
+}

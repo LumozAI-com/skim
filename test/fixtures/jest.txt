@@ -1,0 +1,471 @@
+(node:76) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL jt/board.test.js
+  ✓ passes 0 (1 ms)
+  ✓ passes 1
+  ✓ passes 2 (1 ms)
+  ✓ passes 3
+  ✓ passes 4
+  ✓ passes 5 (1 ms)
+  ✓ passes 6
+  ✓ passes 7
+  ✓ passes 8 (1 ms)
+  ✓ passes 9
+  ✓ passes 10
+  ✓ passes 11
+  ✓ passes 12
+  ✓ passes 13
+  ✓ passes 14
+  ✓ passes 15
+  ✓ passes 16 (1 ms)
+  ✓ passes 17
+  ✓ passes 18
+  ✓ passes 19
+  ✓ passes 20
+  ✓ passes 21 (1 ms)
+  ✓ passes 22
+  ✓ passes 23
+  ✓ passes 24
+  ✓ passes 25
+  ✓ passes 26 (1 ms)
+  ✓ passes 27
+  ✓ passes 28
+  ✓ passes 29
+  ✓ passes 30
+  ✓ passes 31
+  ✓ passes 32
+  ✓ passes 33
+  ✓ passes 34 (1 ms)
+  ✓ passes 35
+  ✓ passes 36
+  ✓ passes 37
+  ✓ passes 38
+  ✓ passes 39
+  ✓ passes 40
+  ✓ passes 41
+  ✓ passes 42
+  ✓ passes 43
+  ✓ passes 44
+  ✓ passes 45
+  ✓ passes 46
+  ✓ passes 47
+  ✓ passes 48
+  ✓ passes 49
+  ✓ passes 50
+  ✓ passes 51
+  ✓ passes 52
+  ✓ passes 53
+  ✓ passes 54
+  ✓ passes 55
+  ✓ passes 56
+  ✓ passes 57
+  ✓ passes 58
+  ✓ passes 59
+  ✓ passes 60
+  ✓ passes 61
+  ✓ passes 62
+  ✓ passes 63
+  ✓ passes 64 (1 ms)
+  ✓ passes 65
+  ✓ passes 66
+  ✓ passes 67
+  ✓ passes 68
+  ✓ passes 69
+  ✓ passes 70
+  ✓ passes 71
+  ✓ passes 72
+  ✓ passes 73 (1 ms)
+  ✓ passes 74
+  ✓ passes 75
+  ✓ passes 76
+  ✓ passes 77
+  ✓ passes 78
+  ✓ passes 79
+  ✓ passes 80
+  ✓ passes 81 (1 ms)
+  ✓ passes 82
+  ✓ passes 83
+  ✓ passes 84
+  ✓ passes 85
+  ✓ passes 86
+  ✓ passes 87
+  ✓ passes 88
+  ✓ passes 89 (1 ms)
+  ✓ passes 90
+  ✓ passes 91
+  ✓ passes 92
+  ✓ passes 93
+  ✓ passes 94
+  ✓ passes 95
+  ✓ passes 96 (1 ms)
+  ✓ passes 97
+  ✓ passes 98
+  ✓ passes 99
+  ✓ passes 100
+  ✓ passes 101
+  ✓ passes 102
+  ✓ passes 103
+  ✓ passes 104 (1 ms)
+  ✓ passes 105
+  ✓ passes 106
+  ✓ passes 107
+  ✓ passes 108
+  ✓ passes 109
+  ✓ passes 110
+  ✓ passes 111
+  ✓ passes 112
+  ✓ passes 113
+  ✓ passes 114
+  ✓ passes 115
+  ✓ passes 116
+  ✓ passes 117
+  ✓ passes 118
+  ✓ passes 119
+  ✓ passes 120
+  ✓ passes 121
+  ✓ passes 122
+  ✓ passes 123
+  ✓ passes 124 (1 ms)
+  ✓ passes 125
+  ✓ passes 126
+  ✓ passes 127
+  ✓ passes 128
+  ✓ passes 129
+  ✓ passes 130
+  ✓ passes 131 (1 ms)
+  ✓ passes 132
+  ✓ passes 133
+  ✓ passes 134
+  ✓ passes 135
+  ✓ passes 136
+  ✓ passes 137
+  ✓ passes 138
+  ✓ passes 139
+  ✓ passes 140
+  ✓ passes 141
+  ✓ passes 142
+  ✓ passes 143
+  ✓ passes 144
+  ✓ passes 145
+  ✓ passes 146
+  ✓ passes 147
+  ✓ passes 148
+  ✓ passes 149
+  ✓ passes 150
+  ✓ passes 151
+  ✓ passes 152
+  ✓ passes 153
+  ✓ passes 154
+  ✓ passes 155
+  ✓ passes 156 (1 ms)
+  ✓ passes 157
+  ✓ passes 158
+  ✓ passes 159
+  ✓ passes 160
+  ✓ passes 161
+  ✓ passes 162
+  ✓ passes 163
+  ✓ passes 164
+  ✓ passes 165
+  ✓ passes 166
+  ✓ passes 167
+  ✓ passes 168 (1 ms)
+  ✓ passes 169
+  ✓ passes 170
+  ✓ passes 171
+  ✓ passes 172
+  ✓ passes 173
+  ✓ passes 174
+  ✓ passes 175
+  ✓ passes 176
+  ✓ passes 177
+  ✓ passes 178
+  ✓ passes 179
+  ✓ passes 180
+  ✓ passes 181
+  ✓ passes 182 (1 ms)
+  ✓ passes 183
+  ✕ archives a task (1 ms)
+  ✕ rejects bad input
+  ✕ renders greeting (1 ms)
+  ✕ loads user
+  ✕ count 0
+  ✕ count 1
+  ✕ count 2
+  ✕ count 3
+  ✕ count 4
+  ✕ count 5 (1 ms)
+  ✕ count 6
+  ✕ count 7
+  ✕ count 8
+  ✕ count 9
+  ✕ count 10
+  ✕ count 11
+
+  ● archives a task
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 2
+
+      Object {
+    -   "archived": true,
+    +   "archived": false,
+        "id": 1,
+    -   "status": "done",
+    +   "status": "todo",
+        "tags": Array [
+          "a",
+    -     "archived",
+        ],
+        "title": "Write",
+      }
+
+      2 | import { task, fetchUser, parse, render } from "../src/lib.js";
+      3 | for (let i = 0; i < 184; i++) test(`passes ${i}`, () => expect(1).toBe(1));
+    > 4 | test("archives a task", () => { expect(task({})).toEqual({ id: 1, title: "Write", status: "done", tags: ["a", "archived"], archived: true }); });
+        |                                                  ^
+      5 | test("rejects bad input", () => { expect(() => parse("??")).toThrow("invalid"); });
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+
+      at Object.toEqual (jt/board.test.js:4:50)
+
+  ● rejects bad input
+
+    expect(received).toThrow(expected)
+
+    Expected substring: "invalid"
+
+    Received function did not throw
+
+      3 | for (let i = 0; i < 184; i++) test(`passes ${i}`, () => expect(1).toBe(1));
+      4 | test("archives a task", () => { expect(task({})).toEqual({ id: 1, title: "Write", status: "done", tags: ["a", "archived"], archived: true }); });
+    > 5 | test("rejects bad input", () => { expect(() => parse("??")).toThrow("invalid"); });
+        |                                                             ^
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+      8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+
+      at Object.toThrow (jt/board.test.js:5:61)
+
+  ● renders greeting
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Hello Ann, you have 4 new messages and 2 pending reviews on the board."
+    Received: "Hello Ann, you have 3 new messages and 2 pending reviews in the board."
+
+      4 | test("archives a task", () => { expect(task({})).toEqual({ id: 1, title: "Write", status: "done", tags: ["a", "archived"], archived: true }); });
+      5 | test("rejects bad input", () => { expect(() => parse("??")).toThrow("invalid"); });
+    > 6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+        |                                                        ^
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+      8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+      9 |
+
+      at Object.toBe (jt/board.test.js:6:56)
+
+  ● loads user
+
+    expect(received).resolves.toEqual()
+
+    Received promise rejected instead of resolved
+    Rejected to value: [HttpError: 503 Service Unavailable from /api/users]
+
+      5 | test("rejects bad input", () => { expect(() => parse("??")).toThrow("invalid"); });
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+    > 7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+        |                                        ^
+      8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+      9 |
+
+      at expect (node_modules/expect/build/index.js:2116:15)
+      at Object.expect (jt/board.test.js:7:40)
+
+  ● count 0
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 100
+    Received: 0
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 1
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 101
+    Received: 1
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 2
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 102
+    Received: 2
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 3
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 103
+    Received: 3
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 4
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 104
+    Received: 4
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 5
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 105
+    Received: 5
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 6
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 106
+    Received: 6
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 7
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 107
+    Received: 7
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 8
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 108
+    Received: 8
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 9
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 109
+    Received: 9
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 10
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 110
+    Received: 10
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+  ● count 11
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 111
+    Received: 11
+
+      6 | test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann, you have 4 new messages and 2 pending reviews on the board."); });
+      7 | test("loads user", async () => { await expect(fetchUser()).resolves.toEqual({ id: 7 }); });
+    > 8 | for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i + 100));
+        |                                                                 ^
+      9 |
+
+      at Object.toBe (jt/board.test.js:8:65)
+
+Test Suites: 1 failed, 1 total
+Tests:       16 failed, 184 passed, 200 total
+Snapshots:   0 total
+Time:        0.163 s
+Ran all test suites matching jt.

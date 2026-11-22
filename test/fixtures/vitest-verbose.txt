@@ -1,0 +1,524 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.1.1 [39m[90m/workspace/app[39m
+
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 0[32m 1[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 1[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 2[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 3[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 4[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 5[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 6[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 7[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 8[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 9[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 10[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 11[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 12[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 13[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 14[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 15[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 16[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 17[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 18[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 19[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 20[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 21[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 22[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 23[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 24[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 25[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 26[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 27[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 28[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 29[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 30[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 31[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 32[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 33[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 34[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 35[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 36[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 37[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 38[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 39[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 40[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 41[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 42[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 43[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 44[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 45[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 46[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 47[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 48[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 49[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 50[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 51[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 52[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 53[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 54[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 55[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 56[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 57[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 58[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 59[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 60[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 61[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 62[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 63[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 64[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 65[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 66[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 67[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 68[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 69[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 70[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 71[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 72[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 73[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 74[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 75[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 76[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 77[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 78[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 79[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 80[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 81[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 82[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 83[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 84[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 85[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 86[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 87[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 88[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 89[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 90[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 91[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 92[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 93[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 94[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 95[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 96[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 97[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 98[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 99[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 100[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 101[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 102[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 103[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 104[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 105[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 106[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 107[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 108[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 109[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 110[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 111[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 112[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 113[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 114[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 115[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 116[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 117[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 118[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 119[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 120[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 121[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 122[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 123[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 124[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 125[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 126[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 127[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 128[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 129[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 130[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 131[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 132[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 133[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 134[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 135[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 136[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 137[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 138[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 139[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 140[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 141[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 142[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 143[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 144[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 145[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 146[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 147[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 148[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 149[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 150[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 151[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 152[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 153[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 154[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 155[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 156[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 157[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 158[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 159[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 160[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 161[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 162[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 163[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 164[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 165[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 166[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 167[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 168[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 169[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 170[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 171[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 172[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 173[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 174[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 175[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 176[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 177[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 178[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 179[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 180[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 181[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 182[32m 0[2mms[22m[39m
+ [32m✓[39m vt/board.test.js[2m > [22mpasses 183[32m 0[2mms[22m[39m
+ [31m×[39m vt/board.test.js[2m > [22marchives a task[32m 3[2mms[22m[39m
+[31m   → expected { id: 1, title: 'Write', …(3) } to deeply equal { id: 1, title: 'Write', …(3) }[39m
+ [31m×[39m vt/board.test.js[2m > [22mrejects bad input[32m 1[2mms[22m[39m
+[31m   → expected [Function] to throw an error[39m
+ [31m×[39m vt/board.test.js[2m > [22mrenders greeting[32m 0[2mms[22m[39m
+[31m   → expected 'Hello Ann, you have 3 new messages an…' to be 'Hello Ann, you have 4 new messages an…' // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mloads user[32m 1[2mms[22m[39m
+[31m   → promise rejected "HttpError: 503 Service Unavailable from /…" instead of resolving[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 0[32m 0[2mms[22m[39m
+[31m   → expected +0 to be 100 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 1[32m 0[2mms[22m[39m
+[31m   → expected 1 to be 101 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 2[32m 0[2mms[22m[39m
+[31m   → expected 2 to be 102 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 3[32m 0[2mms[22m[39m
+[31m   → expected 3 to be 103 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 4[32m 0[2mms[22m[39m
+[31m   → expected 4 to be 104 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 5[32m 0[2mms[22m[39m
+[31m   → expected 5 to be 105 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 6[32m 0[2mms[22m[39m
+[31m   → expected 6 to be 106 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 7[32m 0[2mms[22m[39m
+[31m   → expected 7 to be 107 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 8[32m 0[2mms[22m[39m
+[31m   → expected 8 to be 108 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 9[32m 0[2mms[22m[39m
+[31m   → expected 9 to be 109 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 10[32m 0[2mms[22m[39m
+[31m   → expected 10 to be 110 // Object.is equality[39m
+ [31m×[39m vt/board.test.js[2m > [22mcount 11[32m 0[2mms[22m[39m
+[31m   → expected 11 to be 111 // Object.is equality[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 16 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22marchives a task
+[31m[1mAssertionError[22m: expected { id: 1, title: 'Write', …(3) } to deeply equal { id: 1, title: 'Write', …(3) }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[32m-   "archived": true,[39m
+[31m+   "archived": false,[39m
+[2m    "id": 1,[22m
+[32m-   "status": "done",[39m
+[31m+   "status": "todo",[39m
+[2m    "tags": [[22m
+[2m      "a",[22m
+[32m-     "archived",[39m
+[2m    ],[22m
+[2m    "title": "Write",[22m
+[2m  }[22m
+
+[36m [2m❯[22m vt/board.test.js:[2m4:50[22m[39m
+    [90m  2|[39m [35mimport[39m { task[33m,[39m fetchUser[33m,[39m parse[33m,[39m render } [35mfrom[39m [32m"../src/lib.js"[39m[33m;[39m
+    [90m  3|[39m for (let i = 0; i < 184; i++) test(`passes ${i}`, () => expect(1).toBe…
+    [90m  4|[39m test("archives a task", () => { expect(task({})).toEqual({ id: 1, titl…
+    [90m   |[39m                                                  [31m^[39m
+    [90m  5|[39m test("rejects bad input", () => { expect(() => parse("??")).toThrow("i…
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mrejects bad input
+[31m[1mAssertionError[22m: expected [Function] to throw an error[39m
+
+[32m- Expected:[39m
+null
+
+[31m+ Received:[39m
+undefined
+
+[36m [2m❯[22m vt/board.test.js:[2m5:61[22m[39m
+    [90m  3|[39m for (let i = 0; i < 184; i++) test(`passes ${i}`, () => expect(1).toBe…
+    [90m  4|[39m test("archives a task", () => { expect(task({})).toEqual({ id: 1, titl…
+    [90m  5|[39m test("rejects bad input", () => { expect(() => parse("??")).toThrow("i…
+    [90m   |[39m                                                             [31m^[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mrenders greeting
+[31m[1mAssertionError[22m: expected 'Hello Ann, you have 3 new messages an…' to be 'Hello Ann, you have 4 new messages an…' // Object.is equality[39m
+
+Expected: [32m"Hello Ann, you have [7m4[27m new messages and 2 pending reviews [7mo[27mn the board."[39m
+Received: [31m"Hello Ann, you have [7m3[27m new messages and 2 pending reviews [7mi[27mn the board."[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m6:56[22m[39m
+    [90m  4|[39m test("archives a task", () => { expect(task({})).toEqual({ id: 1, titl…
+    [90m  5|[39m test("rejects bad input", () => { expect(() => parse("??")).toThrow("i…
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m   |[39m                                                        [31m^[39m
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mloads user
+[31m[1mAssertionError[22m: promise rejected "HttpError: 503 Service Unavailable from /…" instead of resolving[39m
+[36m [2m❯[22m vt/board.test.js:[2m7:59[22m[39m
+    [90m  5|[39m test("rejects bad input", () => { expect(() => parse("??")).toThrow("i…
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m   |[39m                                                           [31m^[39m
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m  9|[39m
+
+[31m[1mCaused by: HttpError[22m: 503 Service Unavailable from /api/users[39m
+[36m [2m❯[22m fetchUser src/lib.js:[2m3:46[22m[39m
+[90m [2m❯[22m vt/board.test.js:[2m7:47[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 0
+[31m[1mAssertionError[22m: expected +0 to be 100 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 100[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 1
+[31m[1mAssertionError[22m: expected 1 to be 101 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 101[39m
+[31m+ 1[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 2
+[31m[1mAssertionError[22m: expected 2 to be 102 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 102[39m
+[31m+ 2[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 3
+[31m[1mAssertionError[22m: expected 3 to be 103 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 103[39m
+[31m+ 3[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 4
+[31m[1mAssertionError[22m: expected 4 to be 104 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 104[39m
+[31m+ 4[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 5
+[31m[1mAssertionError[22m: expected 5 to be 105 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 105[39m
+[31m+ 5[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 6
+[31m[1mAssertionError[22m: expected 6 to be 106 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 106[39m
+[31m+ 6[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 7
+[31m[1mAssertionError[22m: expected 7 to be 107 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 107[39m
+[31m+ 7[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 8
+[31m[1mAssertionError[22m: expected 8 to be 108 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 108[39m
+[31m+ 8[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 9
+[31m[1mAssertionError[22m: expected 9 to be 109 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 109[39m
+[31m+ 9[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 10
+[31m[1mAssertionError[22m: expected 10 to be 110 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 110[39m
+[31m+ 10[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/16]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m vt/board.test.js[2m > [22mcount 11
+[31m[1mAssertionError[22m: expected 11 to be 111 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 111[39m
+[31m+ 11[39m
+
+[36m [2m❯[22m vt/board.test.js:[2m8:65[22m[39m
+    [90m  6|[39m test("renders greeting", () => { expect(render("Ann")).toBe("Hello Ann…
+    [90m  7|[39m test("loads user", async () => { await expect(fetchUser()).resolves.to…
+    [90m  8|[39m for (let i = 0; i < 12; i++) test(`count ${i}`, () => expect(i).toBe(i…
+    [90m   |[39m                                                                 [31m^[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/16]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m16 failed[39m[22m[2m | [22m[1m[32m184 passed[39m[22m[90m (200)[39m
+[2m   Start at [22m 14:22:30
+[2m   Duration [22m 104ms[2m (tests 56%, import 25%, transform 12%, worker 6%)[22m
+

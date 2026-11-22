@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.2.0, pluggy-1.7.0
+rootdir: /workspace/api
+collected 203 items
+
+test_app.py ............................................................ [ 29%]
+........................................................................ [ 65%]
+....................................................................FFF  [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_discount_cap _______________________________
+
+>   def test_discount_cap(): assert discount(100, 150) == 0
+E   assert -50.0 == 0
+E    +  where -50.0 = discount(100, 150)
+
+test_app.py:5: AssertionError
+_________________________________ test_age_bad _________________________________
+
+>   def test_age_bad(): assert parse_age("12a") is None
+
+test_app.py:6: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+s = '12a'
+
+    def parse_age(s):
+>       return int(s)
+E       ValueError: invalid literal for int() with base 10: '12a'
+
+app.py:4: ValueError
+__________________________________ test_slug ___________________________________
+
+>   def test_slug(): assert slugify("Hello World") == "hello-world"
+E   AssertionError: assert 'hello_world' == 'hello-world'
+E     
+E     - hello-world
+E     ?      ^
+E     + hello_world
+E     ?      ^
+
+test_app.py:7: AssertionError
+=========================== short test summary info ============================
+FAILED test_app.py::test_discount_cap - assert -50.0 == 0
+FAILED test_app.py::test_age_bad - ValueError: invalid literal for int() with...
+FAILED test_app.py::test_slug - AssertionError: assert 'hello_world' == 'hell...
+======================== 3 failed, 200 passed in 0.05s =========================

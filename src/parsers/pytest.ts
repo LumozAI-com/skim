@@ -1,5 +1,14 @@
 import type { CompressInput, OutputParser } from "../core/types.js";
 
+/**
+ * pytest parser. Rule: never drop a failure or its reason.
+ * - Every "E" line of a failure is kept (up to MAX_E_LINES, then first/last lines),
+ *   except the "?   ^" diff-marker lines, which only repeat the - / + lines.
+ * - Every failing test is listed; past MAX_FAILURES the rest are still named.
+ */
+export const MAX_FAILURES = 50;
+export const MAX_E_LINES = 40;
+
 export const pytestParser: OutputParser = {
   name: "pytest",
 
@@ -53,7 +62,16 @@ export const pytestParser: OutputParser = {
       if (currentTest) {
         const parts = [`- ${currentTest}`];
         if (locationLine) parts.push(`  at ${locationLine}`);
-        for (const e of eLines.slice(0, 4)) {
+        let kept = eLines.filter((e) => !/^E\s+\?\s/.test(e) && e !== "E");
+        if (kept.length > MAX_E_LINES) {
+          const extra = kept.length - (MAX_E_LINES - 5);
+          kept = [
+            ...kept.slice(0, MAX_E_LINES - 10),
+            `… ${extra} more lines (use inspect_log with query=${currentTest})`,
+            ...kept.slice(-5),
+          ];
+        }
+        for (const e of kept) {
           parts.push(`  ${e}`);
         }
         failureDetails.push(parts.join("\n"));
@@ -86,12 +104,13 @@ export const pytestParser: OutputParser = {
     flush();
 
     if (failureDetails.length > 0) {
-      out.push(...failureDetails.slice(0, 12));
-      if (failureDetails.length > 12) {
-        out.push(`... (${failureDetails.length - 12} more failures; use inspect_log)`);
+      out.push(...failureDetails.slice(0, MAX_FAILURES));
+      if (failureDetails.length > MAX_FAILURES) {
+        const rest = failureDetails.slice(MAX_FAILURES).map((d) => `  ${d.split("\n")[0].slice(2)}`);
+        out.push(`… ${rest.length} more failing tests (use inspect_log with query=<test name>):`, ...rest);
       }
     } else if (shortFailures.length > 0) {
-      out.push(...shortFailures.slice(0, 15));
+      out.push(...shortFailures);
     }
 
     return out.join("\n");

@@ -1,0 +1,111 @@
+
+/workspace/app/lint/a.js
+   1:5   warning  'v1' is never reassigned. Use 'const' instead   prefer-const
+   1:20  error    Expected '===' and instead saw '=='             eqeqeq
+   1:40  error    'undefinedThing1' is not defined                no-undef
+   2:5   warning  'v2' is never reassigned. Use 'const' instead   prefer-const
+   2:20  error    Expected '===' and instead saw '=='             eqeqeq
+   2:40  error    'undefinedThing2' is not defined                no-undef
+   3:5   warning  'v3' is never reassigned. Use 'const' instead   prefer-const
+   3:20  error    Expected '===' and instead saw '=='             eqeqeq
+   3:40  error    'undefinedThing3' is not defined                no-undef
+   4:5   warning  'v4' is never reassigned. Use 'const' instead   prefer-const
+   4:20  error    Expected '===' and instead saw '=='             eqeqeq
+   4:40  error    'undefinedThing4' is not defined                no-undef
+   5:5   warning  'v5' is never reassigned. Use 'const' instead   prefer-const
+   5:20  error    Expected '===' and instead saw '=='             eqeqeq
+   5:40  error    'undefinedThing5' is not defined                no-undef
+   6:5   warning  'v6' is never reassigned. Use 'const' instead   prefer-const
+   6:20  error    Expected '===' and instead saw '=='             eqeqeq
+   6:40  error    'undefinedThing6' is not defined                no-undef
+   7:5   warning  'v7' is never reassigned. Use 'const' instead   prefer-const
+   7:20  error    Expected '===' and instead saw '=='             eqeqeq
+   7:40  error    'undefinedThing7' is not defined                no-undef
+   8:5   warning  'v8' is never reassigned. Use 'const' instead   prefer-const
+   8:20  error    Expected '===' and instead saw '=='             eqeqeq
+   8:40  error    'undefinedThing8' is not defined                no-undef
+   9:5   warning  'v9' is never reassigned. Use 'const' instead   prefer-const
+   9:20  error    Expected '===' and instead saw '=='             eqeqeq
+   9:40  error    'undefinedThing9' is not defined                no-undef
+  10:5   warning  'v10' is never reassigned. Use 'const' instead  prefer-const
+  10:22  error    Expected '===' and instead saw '=='             eqeqeq
+  10:42  error    'undefinedThing10' is not defined               no-undef
+
+/workspace/app/lint/b.js
+   1:5   warning  'v1' is never reassigned. Use 'const' instead   prefer-const
+   1:20  error    Expected '===' and instead saw '=='             eqeqeq
+   1:40  error    'undefinedThing1' is not defined                no-undef
+   2:5   warning  'v2' is never reassigned. Use 'const' instead   prefer-const
+   2:20  error    Expected '===' and instead saw '=='             eqeqeq
+   2:40  error    'undefinedThing2' is not defined                no-undef
+   3:5   warning  'v3' is never reassigned. Use 'const' instead   prefer-const
+   3:20  error    Expected '===' and instead saw '=='             eqeqeq
+   3:40  error    'undefinedThing3' is not defined                no-undef
+   4:5   warning  'v4' is never reassigned. Use 'const' instead   prefer-const
+   4:20  error    Expected '===' and instead saw '=='             eqeqeq
+   4:40  error    'undefinedThing4' is not defined                no-undef
+   5:5   warning  'v5' is never reassigned. Use 'const' instead   prefer-const
+   5:20  error    Expected '===' and instead saw '=='             eqeqeq
+   5:40  error    'undefinedThing5' is not defined                no-undef
+   6:5   warning  'v6' is never reassigned. Use 'const' instead   prefer-const
+   6:20  error    Expected '===' and instead saw '=='             eqeqeq
+   6:40  error    'undefinedThing6' is not defined                no-undef
+   7:5   warning  'v7' is never reassigned. Use 'const' instead   prefer-const
+   7:20  error    Expected '===' and instead saw '=='             eqeqeq
+   7:40  error    'undefinedThing7' is not defined                no-undef
+   8:5   warning  'v8' is never reassigned. Use 'const' instead   prefer-const
+   8:20  error    Expected '===' and instead saw '=='             eqeqeq
+   8:40  error    'undefinedThing8' is not defined                no-undef
+   9:5   warning  'v9' is never reassigned. Use 'const' instead   prefer-const
+   9:20  error    Expected '===' and instead saw '=='             eqeqeq
+   9:40  error    'undefinedThing9' is not defined                no-undef
+  10:5   warning  'v10' is never reassigned. Use 'const' instead  prefer-const
+  10:22  error    Expected '===' and instead saw '=='             eqeqeq
+  10:42  error    'undefinedThing10' is not defined               no-undef
+
+/workspace/app/lint/c.js
+   1:5   warning  'v1' is never reassigned. Use 'const' instead   prefer-const
+   1:20  error    Expected '===' and instead saw '=='             eqeqeq
+   1:40  error    'undefinedThing1' is not defined                no-undef
+   2:5   warning  'v2' is never reassigned. Use 'const' instead   prefer-const
+   2:20  error    Expected '===' and instead saw '=='             eqeqeq
+   2:40  error    'undefinedThing2' is not defined                no-undef
+   3:5   warning  'v3' is never reassigned. Use 'const' instead   prefer-const
+   3:20  error    Expected '===' and instead saw '=='             eqeqeq
+   3:40  error    'undefinedThing3' is not defined                no-undef
+   4:5   warning  'v4' is never reassigned. Use 'const' instead   prefer-const
+   4:20  error    Expected '===' and instead saw '=='             eqeqeq
+   4:40  error    'undefinedThing4' is not defined                no-undef
+   5:5   warning  'v5' is never reassigned. Use 'const' instead   prefer-const
+   5:20  error    Expected '===' and instead saw '=='             eqeqeq
+   5:40  error    'undefinedThing5' is not defined                no-undef
+   6:5   warning  'v6' is never reassigned. Use 'const' instead   prefer-const
+   6:20  error    Expected '===' and instead saw '=='             eqeqeq
+   6:40  error    'undefinedThing6' is not defined                no-undef
+   7:5   warning  'v7' is never reassigned. Use 'const' instead   prefer-const
+   7:20  error    Expected '===' and instead saw '=='             eqeqeq
+   7:40  error    'undefinedThing7' is not defined                no-undef
+   8:5   warning  'v8' is never reassigned. Use 'const' instead   prefer-const
+   8:20  error    Expected '===' and instead saw '=='             eqeqeq
+   8:40  error    'undefinedThing8' is not defined                no-undef
+   9:5   warning  'v9' is never reassigned. Use 'const' instead   prefer-const
+   9:20  error    Expected '===' and instead saw '=='             eqeqeq
+   9:40  error    'undefinedThing9' is not defined                no-undef
+  10:5   warning  'v10' is never reassigned. Use 'const' instead  prefer-const
+  10:22  error    Expected '===' and instead saw '=='             eqeqeq
+  10:42  error    'undefinedThing10' is not defined               no-undef
+
+/workspace/app/lint/ui/broken.js
+  2:1  error  Parsing error: Unexpected token
+
+/workspace/app/lint/ui/card.js
+  1:10  error  'unused1' is defined but never used  no-unused-vars
+  2:10  error  'unused2' is defined but never used  no-unused-vars
+  3:10  error  'unused3' is defined but never used  no-unused-vars
+  4:10  error  'unused4' is defined but never used  no-unused-vars
+  5:10  error  'unused5' is defined but never used  no-unused-vars
+  6:10  error  'unused6' is defined but never used  no-unused-vars
+
+✖ 97 problems (67 errors, 30 warnings)
+  0 errors and 30 warnings potentially fixable with the `--fix` option.
+

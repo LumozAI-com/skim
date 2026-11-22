@@ -1,5 +1,42 @@
 import type { CompressInput, OutputParser } from "../core/types.js";
 
+/**
+ * Vitest / Jest parser. Rule: never drop a failure or its reason.
+ *
+ * Where failures are read from:
+ *   - Vitest: the detailed section after "⎯⎯ Failed Tests N ⎯⎯" (also Failed Suites /
+ *     Unhandled Errors). The "×" lines in the run list above it are only names and are
+ *     ignored when the detailed section exists.
+ *   - Jest: the "● test name" blocks.
+ *
+ * Inside a failure block it keeps everything except what is safe to drop:
+ *   - blank lines, ⎯⎯⎯ separators, passing-test (✓) lines
+ *   - source code-frame context lines and ^ pointer lines (the Jest "> 12 |" line that
+ *     points at the failing assertion is kept)
+ *   - stack frames inside node_modules / node:internal (up to MAX_FRAMES others are kept)
+ *
+ * Every failing test is listed. Past MAX_FAILURES the rest are still named.
+ */
+
+export const MAX_FAILURES = 50;
+export const MAX_BLOCK_LINES = 60;
+const MAX_FRAMES = 3;
+
+const SUMMARY_REGEX = /^(Test Files|Test Suites:|Tests:?|Snapshots:?|Duration|Time:)\s/;
+const VITEST_SECTION_REGEX = /⎯{2,}.*\b(Failed Tests|Failed Suites|Unhandled Errors?)\b/;
+const JEST_HEADER_REGEX = /^●\s+/;
+const VITEST_HEADER_REGEX = /^(FAIL\s+|❯\s+FAIL\b)/;
+const LOOSE_HEADER_REGEX = /^(FAIL\s+|×\s+|❯\s+FAIL\b|●\s+)/;
+
+function isNoise(t: string): boolean {
+  if (!t) return true;
+  if (/^⎯/.test(t)) return true; // separators, incl. "⎯⎯⎯[1/16]⎯"
+  if (/^[✓√]\s/.test(t)) return true; // passing tests
+  if (/^\d+\s*\|/.test(t)) return true; // code-frame context "  12| code" / "12 | code"
+  if (/^\|/.test(t)) return true; // pointer line "   |    ^"
+  return false;
+}
+
 export const vitestJestParser: OutputParser = {
   name: "vitest-jest",
 
@@ -15,112 +52,99 @@ export const vitestJestParser: OutputParser = {
   parse(input: CompressInput, cleanOutput: string): string {
     const lines = cleanOutput.split("\n");
     const summaryLines: string[] = [];
-    const failureBlocks: string[] = [];
 
-    // Extract summary metrics
     for (const line of lines) {
-      const trimmed = line.trim();
-      if (
-        /^(Test Files|Test Suites|Tests|Snapshots|Duration|Time)\b/.test(trimmed) &&
-        trimmed.length < 120
-      ) {
-        summaryLines.push(trimmed);
+      const t = line.trim();
+      if (SUMMARY_REGEX.test(t) && t.length < 120 && !/^Snapshots:?\s+0 total/.test(t)) {
+        summaryLines.push(t);
       }
     }
 
     if (input.exitCode === 0) {
-      if (summaryLines.length > 0) {
-        return `PASS\n${summaryLines.join("\n")}`;
-      }
-      return "PASS (all tests succeeded)";
+      return summaryLines.length > 0 ? `PASS\n${summaryLines.join("\n")}` : "PASS (all tests succeeded)";
     }
 
-    // Extract failures cleanly without node_modules stack noise
-    let inFailure = false;
-    let currentBlock: string[] = [];
-    let stackFramesKept = 0;
+    // Pick the section and header style that hold the detailed failures.
+    const vitestStart = lines.findIndex((l) => VITEST_SECTION_REGEX.test(l));
+    const jestMode = vitestStart === -1 && lines.some((l) => JEST_HEADER_REGEX.test(l.trim()));
+    const startIdx = vitestStart === -1 ? 0 : vitestStart + 1;
+    const headerRegex =
+      vitestStart !== -1 ? VITEST_HEADER_REGEX : jestMode ? JEST_HEADER_REGEX : LOOSE_HEADER_REGEX;
 
-    const flushBlock = () => {
-      if (currentBlock.length > 0) {
-        failureBlocks.push(currentBlock.join("\n"));
-        currentBlock = [];
-      }
-      stackFramesKept = 0;
+    const blocks: { name: string; body: string[] }[] = [];
+    let current: { name: string; body: string[]; frames: number } | null = null;
+
+    const flush = () => {
+      if (current) blocks.push({ name: current.name, body: current.body });
+      current = null;
     };
 
-    for (const rawLine of lines) {
-      const trimmed = rawLine.trim();
+    for (let i = startIdx; i < lines.length; i++) {
+      const raw = lines[i];
+      const t = raw.trim();
 
-      // New failure header (Vitest or Jest)
-      if (
-        /^FAIL\s+/.test(trimmed) ||
-        /^●\s+/.test(trimmed) ||
-        /^×\s+/.test(trimmed) ||
-        /^❯\s+FAIL\b/.test(trimmed)
-      ) {
-        flushBlock();
-        inFailure = true;
-        currentBlock.push(trimmed);
+      if (headerRegex.test(t)) {
+        flush();
+        current = { name: t, body: [], frames: 0 };
+        continue;
+      }
+      if (SUMMARY_REGEX.test(t) || /^Ran all test suites/.test(t)) {
+        flush();
+        continue;
+      }
+      if (!current) continue;
+      const cur: { name: string; body: string[]; frames: number } = current;
+
+      // Jest's "> 12 | expect(...)" line shows the failing assertion: keep it, shortened.
+      if (/^>\s*\d+\s*\|/.test(t)) {
+        cur.body.push(t.length > 160 ? `${t.slice(0, 157)}...` : t);
+        continue;
+      }
+      if (isNoise(t)) continue;
+
+      if (/^(at\s|❯\s)/.test(t)) {
+        if (t.includes("node_modules") || t.includes("node:internal")) continue;
+        if (cur.frames >= MAX_FRAMES) continue;
+        cur.frames++;
+        cur.body.push(t);
         continue;
       }
 
-      if (!inFailure) continue;
+      // Keep the line, with Jest's 4-space block indent removed but inner indentation
+      // (object diff structure) preserved.
+      cur.body.push(raw.replace(/^\s{0,4}/, "").trimEnd());
+    }
+    flush();
 
-      // Stop failure section when summary starts
-      if (/^(Test Files|Test Suites|Snapshots|Ran all test suites)\b/.test(trimmed)) {
-        flushBlock();
-        inFailure = false;
-        continue;
-      }
+    const out: string[] = [`FAIL (exit ${input.exitCode})`, ...summaryLines];
 
-      if (!trimmed) continue;
-
-      // Keep assertion/error lines and expected/received diffs
-      if (
-        /^(AssertionError|Error|TypeError|ReferenceError|RangeError|SyntaxError|Expected|Received|\-\s|\+\s|Difference:)/i.test(
-          trimmed
-        ) ||
-        /^expect\(/.test(trimmed)
-      ) {
-        if (currentBlock.length < 12) {
-          currentBlock.push(`  ${trimmed}`);
-        }
-        continue;
-      }
-
-      // Keep up to 2 non-node_modules stack frames per failure
-      if (/^(at\s+|❯\s+)/.test(trimmed)) {
-        if (
-          !trimmed.includes("node_modules") &&
-          !trimmed.includes("node:internal") &&
-          stackFramesKept < 2
-        ) {
-          currentBlock.push(`  ${trimmed}`);
-          stackFramesKept++;
-        }
-        continue;
-      }
-
-      // Keep concise inline code frame line with pointer (e.g. `> 42 | expect(...)`)
-      if (/^>\s*\d+\s*\|/.test(trimmed) && currentBlock.length < 12) {
-        currentBlock.push(`  ${trimmed}`);
-      }
+    if (blocks.length === 0) {
+      const nonEmpty = lines.map((l) => l.trim()).filter((l) => l && !isNoise(l));
+      out.push(...nonEmpty.slice(-30));
+      return out.join("\n");
     }
 
-    flushBlock();
-
-    const out: string[] = [];
-    out.push(`FAIL (exit ${input.exitCode})`);
-    if (summaryLines.length > 0) {
-      out.push(...summaryLines);
-    }
-    if (failureBlocks.length > 0) {
-      out.push("");
-      const maxBlocks = 10;
-      out.push(...failureBlocks.slice(0, maxBlocks));
-      if (failureBlocks.length > maxBlocks) {
-        out.push(`... (${failureBlocks.length - maxBlocks} more failures; use inspect_log)`);
+    out.push("");
+    blocks.slice(0, MAX_FAILURES).forEach((b) => {
+      out.push(b.name);
+      let body = b.body;
+      if (body.length > MAX_BLOCK_LINES) {
+        const extra = body.length - (MAX_BLOCK_LINES - 10);
+        body = [
+          ...body.slice(0, MAX_BLOCK_LINES - 15),
+          `… ${extra} more lines (use inspect_log with query=<test name>)`,
+          ...body.slice(-5),
+        ];
       }
+      for (const l of body) out.push(`  ${l}`);
+    });
+
+    if (blocks.length > MAX_FAILURES) {
+      const rest = blocks.slice(MAX_FAILURES);
+      out.push(
+        `… ${rest.length} more failing tests (use inspect_log with query=<test name>):`,
+        ...rest.map((b) => `  ${b.name}`)
+      );
     }
 
     return out.join("\n");

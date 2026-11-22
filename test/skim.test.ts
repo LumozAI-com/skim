@@ -4,6 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { after, before, describe, it } from "node:test";
 import {
+  builtinParsers,
   compressOutput,
   countTokens,
   formatSkimOutput,
@@ -133,6 +134,56 @@ describe("skim core", () => {
     assert.match(res.summary, /3 TS errors in 2 files/);
     assert.match(res.summary, /L14:22 \[TS2345\]/);
     assert.match(res.summary, /src\/auth\.ts/);
+  });
+
+  it("tsc: keeps nested cause lines and related locations", () => {
+    const raw = [
+      "src/a.ts(2,14): error TS2420: Class 'MemoryRepo' incorrectly implements interface 'Repo'.",
+      "  Property 'remove' is missing in type 'MemoryRepo' but required in type 'Repo'.",
+      "src/a.ts(5,49): error TS2339: Property 'value' does not exist on type 'Result<T>'.",
+      "  Property 'value' does not exist on type '{ ok: false; error: string; }'.",
+      ...Array.from({ length: 20 }, (_, i) => `src/b.ts(${i + 1},14): error TS2322: Type 'string' is not assignable to type 'number'.`),
+    ].join("\n");
+    const res = compressOutput({ command: "npx tsc --noEmit", stdout: raw, stderr: "", exitCode: 2 });
+    assert.match(res.summary, /Property 'remove' is missing in type 'MemoryRepo'/);
+    assert.match(res.summary, /does not exist on type '\{ ok: false; error: string; \}'/);
+  });
+
+  it("tsc: shows every error and every file (no silent cap at 25)", () => {
+    const files = ["src/repo.ts", "src/search.ts", "src/ui/card.ts", "src/board.ts"];
+    const raw = files
+      .flatMap((f, fi) =>
+        Array.from({ length: 11 }, (_, i) => `${f}(${i + 1},${fi + 3}): error TS2322: Type 'x${i}' is not assignable to type 'y${i}'.`)
+      )
+      .join("\n");
+    // Unique plain errors barely compress, so skim passes the raw output through (nothing lost)...
+    const res = compressOutput({ command: "npx tsc --noEmit", stdout: raw, stderr: "", exitCode: 2 });
+    assert.equal(res.passthrough, true);
+    assert.equal(res.summary, raw);
+    // ...and the parser itself must still show all 44 errors and all 4 files.
+    const tsc = builtinParsers.find((p) => p.name === "tsc")!;
+    const summary = tsc.parse({ command: "npx tsc", stdout: raw, stderr: "", exitCode: 2 }, raw);
+    assert.match(summary, /44 TS errors in 4 files/);
+    for (const f of files) assert.match(summary, new RegExp(`${f.replace(/[/.]/g, "\\$&")} \\(11\\)`));
+    assert.doesNotMatch(summary, /more error/);
+    assert.equal((summary.match(/\[TS2322\]/g) || []).length, 44);
+  });
+
+  it("tsc: merges identical errors in a file into one line with all locations", () => {
+    const raw = Array.from({ length: 10 }, (_, i) => `src/c.ts(${i + 1},20): error TS7006: Parameter 'x' implicitly has an 'any' type.`).join("\n");
+    const res = compressOutput({ command: "npx tsc", stdout: raw, stderr: "", exitCode: 2 });
+    assert.match(res.summary, /L1:20, L2:20, L3:20, L4:20, L5:20, L6:20, L7:20, L8:20, L9:20, L10:20 \[TS7006\]/);
+  });
+
+  it("tsc: past the error limit, still names every file that has hidden errors", () => {
+    const raw = [
+      ...Array.from({ length: 200 }, (_, i) => `src/a.ts(${i + 1},1): error TS2322: Msg ${i}.`),
+      ...Array.from({ length: 5 }, (_, i) => `src/ui/card.ts(${i + 1},1): error TS2554: Other ${i}.`),
+    ].join("\n");
+    const res = compressOutput({ command: "npx tsc", stdout: raw, stderr: "", exitCode: 2 });
+    assert.match(res.summary, /205 TS errors in 2 files/);
+    assert.match(res.summary, /Not shown: src\/ui\/card\.ts \(5\)/);
+    assert.match(res.summary, /55 more errors/);
   });
 
   it("passes short output through unchanged instead of making it bigger", () => {

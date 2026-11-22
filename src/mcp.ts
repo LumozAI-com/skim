@@ -7,7 +7,7 @@ import { inspectRun } from "./core/store.js";
 export async function startMcpServer(): Promise<void> {
   const server = new McpServer({
     name: "skim",
-    version: "0.1.1",
+    version: "0.1.2",
   });
 
   server.tool(

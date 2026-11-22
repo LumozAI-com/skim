@@ -16,17 +16,22 @@ Coding agents burn thousands of tokens reading passing tests, `node_modules` sta
 
 Token counts use the real `o200k_base` tokenizer (GPT-4o family; a close proxy for Claude), and include skim's footer.
 
-**Real command output** (captured from actual runs, not fixtures):
+**Real command output** (captured from actual runs, stored in `test/fixtures/`; regenerate with `npm run bench`):
 
 | Command | Raw Tokens | Skim Tokens | Saved |
 | :--- | ---: | ---: | ---: |
-| `npm install --loglevel verbose` (4 deps) | 9,339 | 36 | **-99.6%** |
-| `pytest -v` (203 tests, 3 failing) | 3,889 | 168 | **-95.7%** |
-| `pytest` default (203 tests, 3 failing) | 441 | 168 | **-61.9%** |
-| `tsc --pretty` (4 errors) | 510 | 132 | **-74.1%** |
-| `tsc` plain (4 errors) | 130 | 135 | passthrough (+6-token exit marker) |
+| `npm install --loglevel verbose` | 8,925 | 33 | **-99.6%** |
+| `vitest run` (200 tests, 16 failing) | 14,148 | 1,165 | **-91.8%** |
+| `vitest run --reporter=verbose` (200 tests, 16 failing) | 17,138 | 1,165 | **-93.2%** |
+| `jest` (200 tests, 16 failing) | 4,404 | 1,528 | **-65.3%** |
+| `pytest -v` (203 tests, 3 failing) | 3,869 | 161 | **-95.8%** |
+| `pytest` (203 tests, 3 failing) | 421 | 161 | **-61.8%** |
+| `eslint` (67 errors, 30 warnings, 5 files) | 2,292 | 1,013 | **-55.8%** |
+| `tsc --pretty` (37 errors, 4 files) | 5,440 | 838 | **-84.6%** |
+| `tsc` (37 errors, 4 files) | 991 | 399 | **-59.7%** |
+| `tsc` (4 errors) | 130 | 135 | passthrough (+6-token exit marker) |
 
-Savings depend on how noisy the command is: verbose logs and big test suites compress the most, while output that is already short is passed through unchanged rather than rewritten.
+In every row, all errors, all failing tests and their reasons are kept (checked by `test/real-output.test.ts`). Savings come from dropping noise: passing tests, code frames, install logs, repeated paths and messages.
 
 **Synthetic fixtures** (`npm run bench`):
 
@@ -34,8 +39,8 @@ Savings depend on how noisy the command is: verbose logs and big test suites com
 | :--- | :--- | ---: | ---: | ---: |
 | Vitest (2 fails / 48 pass) | `vitest-jest` | 1,569 | 230 | **-85.3%** |
 | Pytest (1 fail / 60 pass) | `pytest` | 1,288 | 97 | **-92.5%** |
-| TypeScript (`tsc --pretty`) | `tsc` | 314 | 126 | **-59.9%** |
-| ESLint (3 errors, 18 warnings) | `eslint` | 502 | 117 | **-76.7%** |
+| TypeScript (`tsc --pretty`) | `tsc` | 314 | 144 | **-54.1%** |
+| ESLint (3 errors, 18 warnings) | `eslint` | 502 | 174 | **-65.3%** |
 | npm install (noisy) | `pkg-install` | 532 | 37 | **-93%** |
 | git diff (code + lockfile) | `git` | 5,915 | 85 | **-98.6%** |
 
