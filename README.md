@@ -4,6 +4,8 @@
 > Token-efficient CLI & MCP output compressor with lossless-on-demand drill-down for AI coding agents.  
 > *An open-source project by LumozAI.*
 
+![skim compresses npm install output from 8,925 to 33 tokens](assets/skim-demo.gif)
+
 Coding agents burn thousands of tokens reading passing tests, `node_modules` stack frames, `npm install` warnings, and lockfile diffs. **`skim`** sits between your agent and your shell — compressing noisy tool output down to the few lines that matter, while saving the raw log locally under a `run_id` so the agent can drill in *only* when it actually needs more detail.
 
 - **100% Local & Private:** Zero telemetry, zero accounts, zero cloud calls. Your code never leaves your machine.
